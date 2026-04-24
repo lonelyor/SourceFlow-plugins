@@ -12,6 +12,7 @@ on:
       - "scripts/validate-bazaar.js"
       - ".github/workflows/sourceflow-plugins.yml"
       - "README.md"
+      - "PLUGIN_DEVELOPMENT.md"
   workflow_dispatch:
 
 permissions:
