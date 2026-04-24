@@ -10,6 +10,7 @@ on:
       - "stats/**"
       - "scripts/generate-bazaar.js"
       - "scripts/validate-bazaar.js"
+      - ".github/workflows/sourceflow-plugins.yml"
       - "README.md"
   workflow_dispatch:
 
