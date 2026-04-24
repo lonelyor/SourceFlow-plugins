@@ -4,25 +4,29 @@
 
 `https://github.com/lonelyor/SourceFlow-plugins`
 
-GitHub Pages 地址：
+推荐集市源地址：
+
+`https://cdn.jsdelivr.net/gh/lonelyor/SourceFlow-plugins@main/`
+
+GitHub Pages 备用地址：
 
 `https://lonelyor.github.io/SourceFlow-plugins/`
 
-当前仓库维护插件源码、商城提交文件、插件包和 GitHub Pages 发布工作流。SourceFlow 笔记端只需要读取这个静态源，就可以展示、安装和更新这里发布的插件。
+当前仓库维护插件源码、商城提交文件、插件包和 GitHub Pages 发布工作流。SourceFlow 笔记端优先读取提交到仓库根目录的静态 CDN 源，GitHub Pages 作为备用镜像，用于展示、安装和更新这里发布的插件。
 
 ## 在 SourceFlow 笔记中使用
 
 确认下面地址可以访问：
 
-`https://lonelyor.github.io/SourceFlow-plugins/version.json`
+`https://cdn.jsdelivr.net/gh/lonelyor/SourceFlow-plugins@main/version.json`
 
 然后在 SourceFlow 的插件/集市源设置中添加自定义源：
 
 ```text
-Version Info URL: https://lonelyor.github.io/SourceFlow-plugins/version.json
-Stage Base URL:   https://lonelyor.github.io/SourceFlow-plugins
-Package Base URL: https://lonelyor.github.io/SourceFlow-plugins
-Stat Base URL:    https://lonelyor.github.io/SourceFlow-plugins/stat
+Version Info URL: https://cdn.jsdelivr.net/gh/lonelyor/SourceFlow-plugins@main/version.json
+Stage Base URL:   https://cdn.jsdelivr.net/gh/lonelyor/SourceFlow-plugins@main
+Package Base URL: https://cdn.jsdelivr.net/gh/lonelyor/SourceFlow-plugins@main
+Stat Base URL:    https://cdn.jsdelivr.net/gh/lonelyor/SourceFlow-plugins@main/stat
 README CDN Base:  https://cdn.jsdelivr.net/gh
 ```
 
@@ -72,7 +76,7 @@ scripts/
 - `submissions/<type>/*.json`：商城提交源文件，`type` 可为 `plugins/themes/icons/templates/widgets`。
 - `packages/`：发布后的静态资源目录。
 - `stats/index.json`：下载统计输入文件。
-- `dist/`：由 `node scripts/generate-bazaar.js` 生成的最终 GitHub Pages 内容，不需要手工编辑。
+- `dist/`：由 `node scripts/generate-bazaar.js` 生成的最终静态集市内容，不需要手工编辑；发布脚本会把同一份静态根目录同步提交到仓库根目录，供 CDN 直接读取。
 
 ## 维护者发布插件
 
@@ -112,7 +116,7 @@ python .\插件商城.py .\plugins\sourceflow-paper-polish `
 - 生成 `submissions/plugins/*.json`。
 - 复制 ZIP 到 `packages/package/<owner>/<repo>@<hash>.zip`。
 - 复制插件 README、图标、预览图到对应静态目录。
-- 生成 `dist/version.json` 和 stage 索引。
+- 生成 `dist/version.json` 和 stage 索引，并同步到仓库根目录。
 - 推送 `plugins/`、商城提交物、包文件、文档和 Pages 工作流到 `lonelyor/SourceFlow-plugins`。
 
 ## GitHub Pages 发布

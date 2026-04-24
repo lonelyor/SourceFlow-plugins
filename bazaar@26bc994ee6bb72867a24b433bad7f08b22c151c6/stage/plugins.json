@@ -1,0 +1,109 @@
+{
+  "repos": [
+    {
+      "url": "lonelyor/sourceflow-hello@24019cc1db296abc82ca95ad979b87f27364c25f",
+      "updated": "2026-04-20T06:41:32.198Z",
+      "stars": 0,
+      "openIssues": 0,
+      "size": 3247,
+      "installSize": 4653,
+      "package": {
+        "author": "By lonelyor",
+        "url": "https://github.com/lonelyor/sourceflow-hello",
+        "version": "1.0.0",
+        "minAppVersion": "0.1.0",
+        "archiveSHA256": "934510f92479ddc7bb8c8e3774c1dff7f40c8f69a9ecb8a6f98be5f625a40017",
+        "permissions": [
+          "storage",
+          "ui.topbar",
+          "ui.statusbar",
+          "ui.command",
+          "ui.setting"
+        ],
+        "disabledInPublish": false,
+        "backends": [
+          "all"
+        ],
+        "frontends": [
+          "desktop"
+        ],
+        "displayName": {
+          "default": "SourceFlow Hello",
+          "zh_CN": "源流示例插件",
+          "en_US": "SourceFlow Hello"
+        },
+        "description": {
+          "default": "A production-style example plugin for the SourceFlow plugin system.",
+          "zh_CN": "用于验证 SourceFlow 插件系统的生产风格示例插件。",
+          "en_US": "A production-style example plugin for the SourceFlow plugin system."
+        },
+        "readme": {
+          "default": "README.md"
+        },
+        "funding": {
+          "github": "lonelyor"
+        },
+        "keywords": [
+          "sourceflow",
+          "plugin",
+          "sourceflow-hello"
+        ],
+        "name": "sourceflow-hello",
+        "iconURL": "icon.png",
+        "previewURL": "icon.png"
+      }
+    },
+    {
+      "url": "lonelyor/sourceflow-paper-polish@a631efb802c36ce4c475c629471f6d5f4f758f90",
+      "updated": "2026-04-24T20:05:28Z",
+      "stars": 0,
+      "openIssues": 0,
+      "size": 5322,
+      "installSize": 11595,
+      "package": {
+        "author": "By lonelyor",
+        "url": "https://github.com/lonelyor/sourceflow-paper-polish",
+        "version": "1.0.0",
+        "minAppVersion": "0.1.0",
+        "archiveSHA256": "4f3aedc5009d68b87615960f48a9b6a8dedbbd97439dab7dcf43940d5f90f757",
+        "permissions": [
+          "storage",
+          "ui.topbar",
+          "ui.statusbar",
+          "ui.command",
+          "ui.setting",
+          "ui.notification"
+        ],
+        "disabledInPublish": false,
+        "backends": [
+          "all"
+        ],
+        "frontends": [
+          "desktop"
+        ],
+        "displayName": {
+          "default": "Paper Polish",
+          "zh_CN": "纸面美化",
+          "en_US": "Paper Polish"
+        },
+        "description": {
+          "default": "A focused reading and writing polish layer for SourceFlow notes.",
+          "zh_CN": "为 SourceFlow 笔记提供专注阅读和写作排版美化。",
+          "en_US": "A focused reading and writing polish layer for SourceFlow notes."
+        },
+        "readme": {
+          "default": "README.md"
+        },
+        "funding": {
+          "github": "lonelyor"
+        },
+        "keywords": [
+          "plugin",
+          "sourceflow",
+          "sourceflow-paper-polish"
+        ],
+        "name": "sourceflow-paper-polish"
+      }
+    }
+  ]
+}
