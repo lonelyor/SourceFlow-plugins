@@ -1,16 +1,16 @@
 {
-  "url": "lonelyor/sourceflow-paper-polish@d8d1d6609a2442dcb4a8eef3c8927798def44fb7",
-  "updated": "2026-04-24T18:08:21Z",
+  "url": "lonelyor/sourceflow-paper-polish@19f14f29279880baba17c28b58e20ecd513d59c9",
+  "updated": "2026-04-24T18:50:26Z",
   "stars": 0,
   "openIssues": 0,
-  "size": 4643,
-  "installSize": 9895,
+  "size": 5234,
+  "installSize": 11215,
   "package": {
     "author": "By lonelyor",
     "url": "https://github.com/lonelyor/sourceflow-paper-polish",
     "version": "1.0.0",
     "minAppVersion": "0.1.0",
-    "archiveSHA256": "918386ddeec0862476d12e9fa83dd4609f6bf6df925ed0f51a33ee0fdb077e0d",
+    "archiveSHA256": "225c6060eb5fb0320cbf10b403e6e186aa609a4712a15f2b963ebbd5888cdb22",
     "permissions": [
       "storage",
       "ui.topbar",
