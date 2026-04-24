@@ -1,0 +1,9 @@
+{
+  "name": "sourceflow-plugins",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "validate": "node ./scripts/validate-bazaar.js --root .",
+    "generate": "node ./scripts/generate-bazaar.js --root . --output ./dist"
+  }
+}
