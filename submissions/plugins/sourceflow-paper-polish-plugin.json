@@ -1,6 +1,6 @@
 {
   "url": "lonelyor/sourceflow-paper-polish@d8d1d6609a2442dcb4a8eef3c8927798def44fb7",
-  "updated": "2026-04-25T00:00:00Z",
+  "updated": "2026-04-24T17:15:01Z",
   "stars": 0,
   "openIssues": 0,
   "size": 4643,
@@ -47,8 +47,6 @@
       "sourceflow",
       "sourceflow-paper-polish"
     ],
-    "name": "sourceflow-paper-polish",
-    "iconURL": "icon.png",
-    "previewURL": "icon.png"
+    "name": "sourceflow-paper-polish"
   }
 }
