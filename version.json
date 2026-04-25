@@ -1,8 +1,8 @@
 {
-  "bazaar": "f9d742e51fac4720a6310186bc81d36f8b0667e3",
-  "generatedAt": "2026-04-24T20:06:35Z",
+  "bazaar": "1a11fdda545de73a4eeabd96c3c9cb72eefff7aa",
+  "generatedAt": "2026-04-25T18:54:41Z",
   "layout": {
-    "stage": "/bazaar@f9d742e51fac4720a6310186bc81d36f8b0667e3/stage/*.json",
+    "stage": "/bazaar@1a11fdda545de73a4eeabd96c3c9cb72eefff7aa/stage/*.json",
     "packageArchive": "/package/<owner>/<repo>@<hash>.zip",
     "packageAsset": "/package/<owner>/<repo>@<hash>/<asset>",
     "stats": "/stat/bazaar/index.json"

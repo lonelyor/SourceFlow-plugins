@@ -1,6 +1,6 @@
 # SourceFlow 插件编写教程
 
-这份教程面向 SourceFlow 插件仓库维护者。目标是写出可以被商城安装、可以被烟测验证、并且不会影响笔记编辑和同步主流程的插件。
+这份教程面向 SourceFlow 插件作者。目标是写出可以被商城安装、可以被烟测验证、并且不会影响笔记编辑和同步主流程的插件。
 
 ## 1. 创建插件目录
 
@@ -94,7 +94,7 @@ host.control
 - 只有确实需要访问外部服务时才申请 `network.http`。
 - 默认不要申请 `host.control`。
 
-商业化产品要求插件可熔断：插件异常时只影响插件自己，不影响笔记编辑、保存、同步和启动。
+产品级稳定性要求插件可熔断：插件异常时只影响插件自己，不影响笔记编辑、保存、同步和启动。
 
 ## 4. 编写入口 JS
 
@@ -215,15 +215,15 @@ python .\插件商城.py .\plugins\sourceflow-my-plugin --owner lonelyor --repo 
 - `smoke-plugin-runtime.js`：加载插件入口并检查权限守卫。
 - `插件商城.py --skip-push`：完整打包并生成本地商城索引，但不推送 GitHub。
 
-## 9. 发布到插件商城
+## 9. 准备提交到插件商城
 
-确认本地测试通过后运行：
+确认本地测试通过后，先生成本地商城包并检查输出：
 
 ```powershell
 python .\插件商城.py .\plugins\sourceflow-my-plugin `
   --owner lonelyor `
   --repo sourceflow-my-plugin `
-  --github-token-file .release.local.env
+  --skip-push
 ```
 
 脚本会：
@@ -233,8 +233,16 @@ python .\插件商城.py .\plugins\sourceflow-my-plugin `
 - 写入 `submissions/plugins/*.json`。
 - 生成 `packages/package/<owner>/<repo>@<hash>.zip`。
 - 生成 `dist/version.json`。
-- 推送到 `lonelyor/SourceFlow-plugins`。
-- 触发 GitHub Pages 工作流。
+
+提交插件时请提供：
+
+- 插件源码目录。
+- `plugin.json`。
+- 插件 README。
+- 本地烟测结果。
+- 插件申请的权限和申请理由。
+
+中心插件源由维护者审核后更新。普通插件作者不需要 GitHub token，也不需要写入中心插件仓库。
 
 ## 10. 发布前检查清单
 
@@ -244,7 +252,6 @@ python .\插件商城.py .\plugins\sourceflow-my-plugin `
 - README 说明了功能、权限和限制。
 - 烟测通过。
 - `插件商城.py --skip-push` 通过。
-- 需要远端发布时再去掉 `--skip-push`。
 
 ## 11. 版本升级规则
 
